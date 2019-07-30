@@ -45,7 +45,7 @@ for i=1:length(start)-1                                                         
     m = [m, start(i) - (i-1)*N];
 end
 
-[votes, indexes] = hist(m, unique(m))                                                                          %get the indexes and their number of occurence in
+[votes, indexes] = hist(m, unique(m));                                                                          %get the indexes and their number of occurence in
 [M, I] = max(votes);                                                                                            %array (votes) and get the one with most votes
 
 [b, i1] = unique(votes,'first');                                                                                %find elements that don't repeat
