@@ -1,9 +1,9 @@
 function start = findStart(ofdm_autocorr, Nd, Nz, n)
 % INPUTS:
-%     ofdm_autocorr - autocorrelation of input signal
-%     N - length of symbol with guard interval
-%     Nd - length of symbol without guard interval
-%     n - length of received message. Number of received samples
+%     ofdm_autocorr - autocorrelation of input signal (array of doubles)
+%     N - length of symbol with guard interval (integer)
+%     Nd - length of symbol without guard interval (integer)
+%     n - length of received message. Number of received samples (integer)
 %
 % Function returns start of each symbol in array form.
 % Also voting algorithm is performed to get best estimation of a start of first symbol.

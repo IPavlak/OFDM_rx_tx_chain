@@ -1,6 +1,5 @@
 function f = fos( N, fs )
-%UNTITLED2 Summary of this function goes here
-%   Detailed explanation goes here
+
     deltaf = fs/N;
     
     if mod(N,2)==0

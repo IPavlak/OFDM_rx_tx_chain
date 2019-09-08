@@ -9,16 +9,16 @@ function uOFDMc = OFDMgenerator(msg, cons, Nd, Np, Nz, cyclic_part, PRBS_generat
 % If message does not contain enough integers to fill all the data samples in last OFDM symbol, that OFDM symbol is discarded. 
 % 
 % INPUTS:
-%     msg - message, integers to be mapped into given constellation, Constellations are defined in function constellation.m
-%     cons - array which defines constellation
-%     Nd - number of samples in OFDM symbol not including the guard interval (but including the pilots)
-%     Nz - number of samples in guard interval
+%     msg - message, integers to be mapped into given constellation, Constellations are defined in function constellation.m (array of integers)
+%     cons - array which defines constellation (array of complex numbers)
+%     Nd - number of samples in OFDM symbol not including the guard interval, but including the pilots (integer)
+%     Nz - number of samples in guard interval (integer)
 %     cyclic_part - number of samples of guard interval that belong to cyclic prefix which means that they are copied from the end of the OFDM symbol, 
-%                   rest of guard interval is PRBS signal
-%     PRBS_generator - seed for generating PRBS signal
-%     PRBS_scaler - factor which multiplies generated PRBS signal (PRBS signal are 0s and 1s)
-%     refAmp - referent amplitude for each of the pilots
-%     refPhase - referent phase of each pilot
+%                   rest of guard interval is PRBS signal (integer)
+%     PRBS_generator - seed for generating PRBS signal (integer)
+%     PRBS_scaler - factor which multiplies generated PRBS signal - PRBS signal are 0s and 1s (integer)
+%     refAmp - referent amplitude for each of the pilots (integer or array of doubles)
+%     refPhase - referent phase of each pilot (integer or array of doubles)
 
 N = Nd + Nz;
 n = length(msg);
